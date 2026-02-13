@@ -8,7 +8,7 @@ function tp {
     
     # Check if user wants a known command or help
     if ($cmd -in @("add", "save", "list", "--help", "update", "--update")) {
-        teleport-core $args
+        python -m teleport.cli $args
         return
     }
 
@@ -17,9 +17,9 @@ function tp {
     try {
         # Default behavior: Jump
         if (-not $cmd) {
-            teleport-core jump --interactive --output-file $tmp_file
+            python -m teleport.cli jump --interactive --output-file $tmp_file
         } else {
-            teleport-core jump $args --output-file $tmp_file
+            python -m teleport.cli jump $args --output-file $tmp_file
         }
 
         if ($LASTEXITCODE -eq 0 -and (Test-Path $tmp_file)) {

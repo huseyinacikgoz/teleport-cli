@@ -4,7 +4,7 @@ tp() {
     
     # Check if user wants a known command or help
     if [[ "$cmd" == "add" || "$cmd" == "save" || "$cmd" == "list" || "$cmd" == "--help" || "$cmd" == "update" || "$cmd" == "--update" ]]; then
-        teleport-core "$@"
+        python3 -m teleport.cli "$@"
         return $?
     fi
 
@@ -12,9 +12,9 @@ tp() {
     
     # Default behavior: Jump
     if [[ -z "$cmd" ]]; then
-        teleport-core jump --interactive --output-file "$tmp_file"
+        python3 -m teleport.cli jump --interactive --output-file "$tmp_file"
     else
-        teleport-core jump "$@" --output-file "$tmp_file"
+        python3 -m teleport.cli jump "$@" --output-file "$tmp_file"
     fi
      
     exit_code=$?

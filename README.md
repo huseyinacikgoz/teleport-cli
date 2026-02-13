@@ -20,18 +20,19 @@ A cross-platform directory navigation tool that learns from your habits.
 2. Add the shell integration to your config file:
 
    ### Bash (~/.bashrc)
+   Replace `/path/to/` with the actual path to your project.
    ```bash
-   source /path/to/teleport-cli/scripts/teleport.bash
+   source /home/huseyin/Belgeler/huseyinacikgozcomtr/Projeler/teleport-cli/scripts/teleport.bash
    ```
 
    ### Zsh (~/.zshrc)
    ```zsh
-   source /path/to/teleport-cli/scripts/teleport.zsh
+   source /home/huseyin/Belgeler/huseyinacikgozcomtr/Projeler/teleport-cli/scripts/teleport.zsh
    ```
 
    ### PowerShell ($PROFILE)
    ```powershell
-   . /path/to/teleport-cli/scripts/teleport.ps1
+   . /home/huseyin/Belgeler/huseyinacikgozcomtr/Projeler/teleport-cli/scripts/teleport.ps1
    ```
 
 ## Usage
