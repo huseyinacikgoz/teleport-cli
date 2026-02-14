@@ -1,27 +1,21 @@
+<!-- Language Selection -->
+<p align="center">
+  <a href="#english">English</a>
+  <span> • </span>
+  <a href="#türkçe">Türkçe</a>
+</p>
+
+<div id="english"></div>
+
 # Teleport
 
-**Minimalist, Smart Directory Jumper for Linux.**  
-**Linux için Minimalist ve Akıllı Dizin Gezgini.**
+**Minimalist, Smart Directory Jumper for Linux.**
 
 [![Version](https://img.shields.io/badge/version-v1.0.0-blue?style=flat-square)](https://github.com/huseyinacikgoz/teleport-cli/releases)
 [![Platform](https://img.shields.io/badge/platform-linux-green?style=flat-square)](https://www.linux.org/)
 [![Language](https://img.shields.io/badge/language-python3-yellow?style=flat-square)](https://www.python.org/)
 
-<!-- Language Selection -->
-<p align="center">
-  <a href="#english">
-    <img src="https://img.shields.io/badge/Lang-English-blue?style=for-the-badge" alt="English">
-  </a>
-  <a href="#türkçe">
-    <img src="https://img.shields.io/badge/Dil-Türkçe-red?style=for-the-badge" alt="Türkçe">
-  </a>
-</p>
-
 ---
-
-<div id="english"></div>
-
-## 🇬🇧 English
 
 Stop typing `cd ../../../var/www/html`. Just **teleport** there.  
 Teleport learns your frequently visited directories and lets you jump to them instantly with fuzzy search.
@@ -72,7 +66,15 @@ sudo rm -rf /opt/teleport-cli /usr/local/bin/tp
 
 <div id="türkçe"></div>
 
-## 🇹🇷 Türkçe
+# Teleport
+
+**Linux için Minimalist ve Akıllı Dizin Gezgini.**
+
+[![Version](https://img.shields.io/badge/version-v1.0.0-blue?style=flat-square)](https://github.com/huseyinacikgoz/teleport-cli/releases)
+[![Platform](https://img.shields.io/badge/platform-linux-green?style=flat-square)](https://www.linux.org/)
+[![Language](https://img.shields.io/badge/language-python3-yellow?style=flat-square)](https://www.python.org/)
+
+---
 
 Uzun uzun `cd` yazmaya son. Sadece **ışınlanın**.  
 Teleport, sık kullandığınız klasörleri öğrenir ve sizi onlara en kısa yoldan, akıllıca ulaştırır.
