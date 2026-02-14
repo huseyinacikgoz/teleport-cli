@@ -71,3 +71,5 @@ src/teleport_cli.egg-info/
 # OS
 .DS_Store
 Thumbs.db
+AGENTS.md
+memory-bank/
