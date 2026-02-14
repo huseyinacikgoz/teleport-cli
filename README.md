@@ -1,30 +1,40 @@
 # Teleport
-**Minimalist, Smart Directory Jumper for Linux.**
 
-![Version](https://img.shields.io/badge/version-1.0.0-blue)
-![Platform](https://img.shields.io/badge/platform-linux-green)
-![Language](https://img.shields.io/badge/language-python3-yellow)
+**Minimalist, Smart Directory Jumper for Linux.**  
+**Linux için Minimalist ve Akıllı Dizin Gezgini.**
 
-[English](#english) | [Türkçe](#türkçe)
+[![Version](https://img.shields.io/badge/version-v1.0.0-blue?style=flat-square)](https://github.com/huseyinacikgoz/teleport-cli/releases)
+[![Platform](https://img.shields.io/badge/platform-linux-green?style=flat-square)](https://www.linux.org/)
+[![Language](https://img.shields.io/badge/language-python3-yellow?style=flat-square)](https://www.python.org/)
+
+<!-- Language Selection -->
+<p align="center">
+  <a href="#english">
+    <img src="https://img.shields.io/badge/Lang-English-blue?style=for-the-badge" alt="English">
+  </a>
+  <a href="#türkçe">
+    <img src="https://img.shields.io/badge/Dil-Türkçe-red?style=for-the-badge" alt="Türkçe">
+  </a>
+</p>
 
 ---
 
 <div id="english"></div>
 
-## English
+## 🇬🇧 English
 
-Stop typing `cd ../../../var/www/html`. Just **teleport** there.
+Stop typing `cd ../../../var/www/html`. Just **teleport** there.  
 Teleport learns your frequently visited directories and lets you jump to them instantly with fuzzy search.
 
 ### ✨ Features
-- **Smart Jump:** `tp <query>` finds the best match.
-- **Auto Scan:** `tp scan` automatically adds all subdirectories.
-- **Interactive:** Select from a list if multiple matches found.
+- **Smart Jump:** `tp <query>` finds the best match instantly.
+- **Auto Scan:** `tp scan` automatically discovers subdirectories.
+- **Interactive Menu:** Navigate through matches with arrow keys.
 - **Aliases:** Save long commands (`tp save "npm run dev" -n start`).
-- **Clean:** No background processes, just a simple database.
+- **Clean:** No background monitoring, just a simple SQLite database.
 - **Bilingual:** Fully supports English and Turkish (`tp config --lang tr`).
 
-### 📦 Installation (Universal Linux)
+### 📦 Installation
 
 Works on Debian, Ubuntu, Arch, Fedora, etc.
 
@@ -45,6 +55,8 @@ chmod +x install.sh
 | `tp save` | Save command alias | `tp save "ls -la" -n ll` |
 | `tp list` | Show stats | `tp list` |
 | `tp clean` | Clean history | `tp clean --all` |
+| `tp backup` | Backup Database | `tp backup ~/tp.bak` |
+| `tp restore` | Restore Database | `tp restore ~/tp.bak` |
 | `tp config` | Change language | `tp config --lang tr` |
 
 ### ❌ Uninstall
@@ -52,7 +64,7 @@ chmod +x install.sh
 # Debian/Ubuntu
 sudo apt remove teleport-cli
 
-# Other Distros (Arch/Fedora)
+# Other Distros
 sudo rm -rf /opt/teleport-cli /usr/local/bin/tp
 ```
 
@@ -60,22 +72,22 @@ sudo rm -rf /opt/teleport-cli /usr/local/bin/tp
 
 <div id="türkçe"></div>
 
-## Türkçe
+## 🇹🇷 Türkçe
 
-Uzun uzun `cd` yazmaya son. Sadece **ışınlanın**.
-Teleport, sık kullandığınız klasörleri öğrenir ve sizi onlara en kısa yoldan ulaştırır.
+Uzun uzun `cd` yazmaya son. Sadece **ışınlanın**.  
+Teleport, sık kullandığınız klasörleri öğrenir ve sizi onlara en kısa yoldan, akıllıca ulaştırır.
 
 ### ✨ Özellikler
-- **Akıllı Geçiş:** `tp <sorgu>` en iyi eşleşmeyi bulur.
-- **Otomatik Tarama:** `tp scan` ile tüm alt klasörleri otomatik ekleyin.
-- **Etkileşimli Menü:** Birden fazla sonuç varsa listeden seçtirir.
+- **Akıllı Geçiş:** `tp <sorgu>` en iyi eşleşmeyi anında bulur.
+- **Otomatik Tarama:** `tp scan` ile tüm alt klasörleri tek komutla ekleyin.
+- **Etkileşimli Menü:** Birden fazla sonuç varsa ok tuşlarıyla seçin.
 - **Takma Adlar:** Uzun komutları kaydedin (`tp save "npm run dev" -n baslat`).
 - **Temiz:** Arka plan işlemi yok, sadece basit ve hızlı.
 - **Çift Dil:** İngilizce ve Türkçe tam destek (`tp config --lang tr`).
 
-### 📦 Kurulum (Tüm Linux Dağıtımları)
+### 📦 Kurulum
 
-Debian, Ubuntu, Arch, Fedora vb. hepsinde çalışır.
+Debian, Ubuntu, Arch, Fedora vb. tüm Linux dağıtımlarında çalışır.
 
 ```bash
 chmod +x install.sh
@@ -94,13 +106,15 @@ chmod +x install.sh
 | `tp save` | Komut Kaydet | `tp save "ls -la" -n ll` |
 | `tp list` | İstatistikler | `tp list` |
 | `tp clean` | Temizlik Yap | `tp clean --all` |
-| `tp config` | Dili Değiştir | `tp config --lang tr` |
+| `tp backup` | Yedekle | `tp backup ~/tp.bak` |
+| `tp restore` | Geri Yükle | `tp restore ~/tp.bak` |
+| `tp config` | Dili Değiştir | `tp config --lang en` |
 
 ### ❌ Kaldırma
 ```bash
 # Debian/Ubuntu
 sudo apt remove teleport-cli
 
-# Diğer Dağıtımlar (Arch/Fedora)
+# Diğer Dağıtımlar
 sudo rm -rf /opt/teleport-cli /usr/local/bin/tp
 ```
